@@ -19,9 +19,12 @@ class LogisticRegressionEP34:
     #2.2
     def init_parameters(self):
 
-        self.w = np.random.rand(self.p)*0.1
-        self.b = np.random.rand()*0.1
+        if(self.w is None or self.b is None):
 
+            self.w = np.random.rand(self.p)*0.1
+            self.b = np.random.rand()*0.1
+        else:
+            print("Parameters are already initialized")
     #2.3
     def forward(self,X):
 
@@ -105,14 +108,15 @@ class LogisticRegressionEP34:
             #show the loss and the iteration requested
             if (iteration + 1) % show_step ==0 :
                 current_loss = self.loss(X, y)
-                print(f"Iteration {iteration + 1}: Loss = {current_loss}")
 
-        #show the diagram       
-        if show_line:
-                    self.show_line(X, y)
+                print(f"Iteration {iteration + 1}: Loss = {current_loss}")
+                if show_line:
+                    self.show_line(X, y,current_loss)
+
+        
     
     #2.9
-    def show_line(self, X: np.ndarray, y: np.ndarray) -> None:
+    def show_line(self, X: np.ndarray, y: np.ndarray,loss) -> None:
         """
         Plot a binary problem and a line. This function assumes 2-D problem
         (just plots the first two dimensions of the data)
@@ -132,6 +136,7 @@ class LogisticRegressionEP34:
         xline = np.arange(min_x[0], max_x[0], (max_x[0] - min_x[0]) / 100)
         yline = (self.w[0]*xline + self.b) / (-self.w[1])
         plt.plot(xline, yline, 'b')
+        plt.title(f"Loss: {loss}")
         plt.show()
 
 
