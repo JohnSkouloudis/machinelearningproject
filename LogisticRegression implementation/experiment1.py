@@ -6,6 +6,7 @@ from logistic_regression import LogisticRegressionEP34
 
 
 #Test 1
+print("-----------------Test 1--------------------")
 
 c1 = np.array([[0, 8], [0, 8]])
 
@@ -22,13 +23,14 @@ pred1 = model1.predict(x_test1)
 
 acc1 = accuracy_score(y_test1, pred1)
 
-print("-----------------Test 1--------------------")
+
 print(f"Accuracy for {c1}={acc1}")
 print("-------------------------------------")
 
 
 #Test 2
 
+print("-----------------Test 2--------------------")
 c2 = np.array([[0, 1], [0, 3]])
 
 x2,y2 = generate_binary_problem(c2,1000)
@@ -44,12 +46,13 @@ pred2 = model1.predict(x_test2)
 
 acc2 = accuracy_score(y_test2, pred2)
 
-print("----------------Test 2---------------------")
+
 print(f"Accuracy for {c2}={acc2}")
-print("-------------------------------------")
+print("-------------------------------------======")
 
 
 #Test 3
+print("-----------------Test 3--------------------")
 
 c3 = np.array([[0, 1], [0, 1]])
 
@@ -66,9 +69,8 @@ pred3 = model3.predict(x_test3)
 
 acc3 = accuracy_score(y_test3, pred3)
 
-print("-----------------Test3--------------------")
 print(f"Accuracy for {c3}={acc3}")
-print("-------------------------------------")
+print("-------------------------------------------")
 
 
 
