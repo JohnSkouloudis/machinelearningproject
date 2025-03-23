@@ -54,12 +54,12 @@ a valuable resource for understanding transfer learning concepts within the AI c
     Implements the first experiment using logistic regression. It uses the `generate_binary_problem` function
     to test the logistic regression implementation for different linear separable problems.
   - `experiment2.py`    
-    This script uses the breast cancer dataset from [scikit-learn](https://scikit-learn.org/stable/) to test how the well
+    This script uses the breast cancer dataset from [scikit-learn](https://scikit-learn.org/stable/) to test how well
     the logistic regression implementation performs on a real dataset,by calculating the mean of the accuracy and the standard deviation for 20
     iterations. 
   - `experiment3.py`    
     This script performs the same test as `experiment2` using the Logistic Regression class from [scikit-learn](https://scikit-learn.org/stable/) instead.
-    The purpose of this experiment is to compare the performance of the two implementation of the algorithm.
+    The purpose of this experiment is to compare the performance of the two implementations of the algorithm.
 
 ## Setup
 ```
